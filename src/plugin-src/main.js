@@ -1,11 +1,13 @@
-import NumberInput from './NumberInput.vue';
+import VueNumberInput from './NumberInput.vue';
 
-NumberInput.install = (Vue) => {
-  Vue.component('number-input', NumberInput);
+const NumInpPlugin = {
+  install(Vue, options) {
+    Vue.component(VueNumberInput.name, VueNumberInput);
+  },
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(NumberInput);
+  window.Vue.use(VueNumberInput);
 }
 
-export default NumberInput;
+export default NumInpPlugin;

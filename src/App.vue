@@ -4,7 +4,7 @@
 
     <section>
       <h3>unsigned | integer | step === 2 | maxLen === 2</h3>
-      <vue-num-input
+      <vue-number-input
         v-model="test0"
         placeholder="Write some text"
         numberType="integer"
@@ -16,7 +16,7 @@
 
     <section>
       <h3>signed | integer | step === 2 | maxLen === 4</h3>
-      <vue-num-input
+      <vue-number-input
         v-model="test1"
         placeholder="Write some text"
         numberType="integer"
@@ -27,7 +27,7 @@
 
     <section>
       <h3>signed | integer | step === 1</h3>
-      <vue-num-input
+      <vue-number-input
         v-model="test2"
         placeholder="Write some text"
         numberType="integer"
@@ -36,7 +36,7 @@
 
     <section>
       <h3>signed | integer | step === 5 | maxValue === 10 | minValue === -10</h3>
-      <vue-num-input
+      <vue-number-input
         v-model="test3"
         placeholder="Write some text"
         numberType="integer"
@@ -48,7 +48,7 @@
 
     <section>
       <h3>unsigned | integer | step === 5 | maxValue === 20 | minValue === 10</h3>
-      <vue-num-input
+      <vue-number-input
         v-model="test4"
         placeholder="Write some text"
         numberType="integer"
@@ -62,13 +62,8 @@
 </template>
 
 <script>
-import VueNumInput from '@/plugin-src/NumberInput.vue';
-
 export default {
   name: 'app',
-  components: {
-    VueNumInput,
-  },
   data() {
     return {
       test0: '0',
