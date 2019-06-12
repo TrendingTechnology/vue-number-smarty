@@ -1,17 +1,82 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>@seokky/vue-number-input</h1>
+
+    <section>
+      <h3>unsigned | integer | step === 2 | maxLen === 2</h3>
+      <vue-num-input
+        v-model="test0"
+        placeholder="Write some text"
+        numberType="integer"
+        unsigned
+        :step="2"
+        :maxLen="2"
+      />
+    </section>
+
+    <section>
+      <h3>signed | integer | step === 2 | maxLen === 4</h3>
+      <vue-num-input
+        v-model="test1"
+        placeholder="Write some text"
+        numberType="integer"
+        :step="2"
+        :maxLen="4"
+      />
+    </section>
+
+    <section>
+      <h3>signed | integer | step === 1</h3>
+      <vue-num-input
+        v-model="test2"
+        placeholder="Write some text"
+        numberType="integer"
+      />
+    </section>
+
+    <section>
+      <h3>signed | integer | step === 5 | maxValue === 10 | minValue === -10</h3>
+      <vue-num-input
+        v-model="test3"
+        placeholder="Write some text"
+        numberType="integer"
+        :maxValue="10"
+        :minValue="-10"
+        :step="5"
+      />
+    </section>
+
+    <section>
+      <h3>unsigned | integer | step === 5 | maxValue === 20 | minValue === 10</h3>
+      <vue-num-input
+        v-model="test4"
+        placeholder="Write some text"
+        numberType="integer"
+        unsigned
+        :maxValue="20"
+        :minValue="10"
+        :step="5"
+      />
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import VueNumInput from '@/plugin-src/NumberInput.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    VueNumInput,
+  },
+  data() {
+    return {
+      test0: '0',
+      test1: '1',
+      test2: '2',
+      test3: '3',
+      test4: '14',
+    };
   },
 };
 </script>
@@ -24,5 +89,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+section {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 2px solid rgba(0,0,0,.5);
+  h3 {
+    margin-top: 0;
+  }
 }
 </style>

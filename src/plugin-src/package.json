@@ -1,0 +1,31 @@
+{
+  "name": "@seokky/vue-number-input",
+  "version": "1.0.0",
+  "description": "Number input with rich functionality for Vue.js",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/Seokky/vue-number-input",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seokky/vue-number-input.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Seokky/vue-number-input/issues"
+  },
+  "keywords": [
+    "number",
+    "input",
+    "number-input",
+    "vue-component",
+    "component",
+    "vue",
+    "vue.js",
+    "numeric"
+  ],
+  "author": {
+    "name": "Maxim Noverin"
+  },
+  "license": "MIT"
+}
