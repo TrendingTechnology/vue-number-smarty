@@ -7,7 +7,7 @@
 1. integer/float
 2. signed/unsigned
 3. step size
-4. increment/decrement value by scrolling when focused
+4. **increment/decrement value by scrolling when focused**
 5. align variants
 6. min and max boundaries
 7. max length of integer part (only for float type)
