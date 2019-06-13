@@ -32,6 +32,8 @@ That's all!
 
 ## Usage
 
+![](https://yadi.sk/i/l9sVfgFDpn30YA)
+
 ```
 <vue-number-input
   v-model="test0"
