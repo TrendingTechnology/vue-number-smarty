@@ -1,4 +1,16 @@
-# vue-number-smarty (package is not published yet)
+# vue-number-smarty
+
+## Features
+
+1. integer/float
+2. signed/unsigned
+3. step size
+4. increment/decrement value by scrolling when focused
+5. align variants
+6. min and max boundaries
+7. max length of integer part (only for float type)
+8. max length of float part (only for float type)
+9. max length of string
 
 ## Installation
 ```
