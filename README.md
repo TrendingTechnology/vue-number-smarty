@@ -2,11 +2,11 @@
 
 ## Installation
 ```
-npm i @seokky/vue-number-input
+npm i vue-smarty-number
 ```
 or with yarn:
 ```
-yarn add @seokky/vue-number-input
+yarn add vue-smarty-number
 ```
 Then paste it in your main.js file:
 ```
