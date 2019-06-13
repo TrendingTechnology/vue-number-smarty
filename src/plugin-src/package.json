@@ -1,5 +1,5 @@
 {
-  "name": "vue-smarty-number",
+  "name": "vue-number-smarty",
   "version": "1.0.0",
   "description": "Number input with rich functionality for Vue.js",
   "main": "main.js",
@@ -7,13 +7,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/Seokky/vue-number-input",
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10"
+  },
+  "homepage": "https://github.com/Seokky/vue-number-smarty",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Seokky/vue-number-input.git"
+    "url": "git+https://github.com/Seokky/vue-number-smarty.git"
   },
   "bugs": {
-    "url": "https://github.com/Seokky/vue-number-input/issues"
+    "url": "https://github.com/Seokky/vue-number-smarty/issues"
   },
   "keywords": [
     "number",
