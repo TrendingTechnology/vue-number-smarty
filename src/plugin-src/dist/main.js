@@ -1,5 +1,5 @@
 /*!
- * vue-number-smarty v1.0.3
+ * vue-number-smarty v1.0.5
  * (c) Maxim Noverin
  * Released under the MIT License.
  */
@@ -34,11 +34,17 @@ var __vue_create_injector__ = _interopDefault(require('vue-runtime-helpers/dist/
 //
 //
 //
+//
 
 /* eslint-disable consistent-return, no-restricted-globals, no-lonely-if */
 var script = {
   name: 'VueNumberInput',
   props: {
+    readonly: {
+      required: false,
+      type: Boolean,
+      default: false
+    },
     align: {
       required: false,
       type: String,
@@ -105,7 +111,7 @@ var script = {
       type: Number,
       default: 2
     },
-    errorred: {
+    error: {
       required: false,
       type: Boolean,
       default: false
@@ -164,6 +170,12 @@ var script = {
     }
   },
   computed: {
+    inputClassesComputed: function inputClassesComputed() {
+      return {
+        'vue-number-input__input': true,
+        'vue-number-input__input-error': this.error
+      };
+    },
     stylesComputed: function stylesComputed() {
       return {
         textAlign: this.align
@@ -343,11 +355,12 @@ var __vue_render__ = function __vue_render__() {
       value: _vm.model,
       expression: "model"
     }],
-    staticClass: "vue-number-input__input",
+    class: _vm.inputClassesComputed,
     style: _vm.stylesComputed,
     attrs: {
       "type": "text",
-      "placeholder": _vm.placeholder
+      "placeholder": _vm.placeholder,
+      "disabled": _vm.readonly
     },
     domProps: {
       "value": _vm.model
@@ -385,8 +398,8 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-3315c788_0", {
-    source: ".vue-number-input__wrapper{display:inline-block;position:relative}.vue-number-input__wrapper .vue-number-input__input{padding:3px 10px;padding-right:20px;font-size:1rem}.vue-number-input__wrapper .vue-number-input__arrows-wrapper{position:absolute;right:0;top:0;bottom:0;display:flex;flex-direction:column;padding:3px 0}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-up{position:relative;background:0 0;box-shadow:none;border:none;outline:0;flex-grow:1}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-up:hover{cursor:pointer;transform:scale(1.1)}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-up:after{display:block;border-bottom:6px solid rgba(0,0,0,.6);border-left:4px solid transparent;border-right:4px solid transparent;content:\"\";width:0;top:0;bottom:0}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-down{position:relative;background:0 0;box-shadow:none;border:none;outline:0;flex-grow:1}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-down:hover{cursor:pointer;transform:scale(1.1)}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-down:after{display:block;border-top:6px solid rgba(0,0,0,.6);border-left:4px solid transparent;border-right:4px solid transparent;content:\"\";width:0;top:0;bottom:0}",
+  inject("data-v-745612d0_0", {
+    source: ".vue-number-input__wrapper{display:inline-block;position:relative}.vue-number-input__wrapper .vue-number-input__input{padding:5px 10px;padding-right:20px;font-size:1rem;box-shadow:none;border:none;border-bottom:2px solid rgba(128,128,128,.8);outline:0}.vue-number-input__wrapper .vue-number-input__input:focus{box-shadow:0 -1px 4px rgba(0,0,0,.1)}.vue-number-input__wrapper .vue-number-input__input-error{border-bottom:2px solid #dc143c;background:rgba(220,20,60,.1)}.vue-number-input__wrapper .vue-number-input__arrows-wrapper{position:absolute;right:0;top:0;bottom:3px;display:flex;flex-direction:column;padding:3px 0}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-up{position:relative;background:0 0;box-shadow:none;border:none;outline:0;flex-grow:1}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-up:hover{cursor:pointer;transform:scale(1.1)}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-up:after{display:block;border-bottom:6px solid rgba(0,0,0,.6);border-left:4px solid transparent;border-right:4px solid transparent;content:\"\";width:0;top:0;bottom:0}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-down{position:relative;background:0 0;box-shadow:none;border:none;outline:0;flex-grow:1}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-down:hover{cursor:pointer;transform:scale(1.1)}.vue-number-input__wrapper .vue-number-input__arrows-wrapper .vue-number-input__arrow-down:after{display:block;border-top:6px solid rgba(0,0,0,.6);border-left:4px solid transparent;border-right:4px solid transparent;content:\"\";width:0;top:0;bottom:0}",
     map: undefined,
     media: undefined
   });

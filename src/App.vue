@@ -2,6 +2,7 @@
   <div id="app">
     <header>
       <h1>vue-number-smarty</h1>
+      <a href="https://github.com/Seokky/vue-number-smarty">github</a>
     </header>
 
     <section>
@@ -19,13 +20,14 @@
     </section>
 
     <section>
-      <span class="input-label">signed, float, step === 2,</span>
+      <span class="input-label">signed, float, step === 2, error</span>
       <span class="input-label">intPartMaxLen === 2, floatPartMaxLen === 2, align === 'right'</span>
       <vue-number-input
         v-model="test1"
         placeholder="Write some text"
         numberType="float"
         align="right"
+        error
         :step="2"
         :intPartMaxLen="2"
         :floatPartMaxLen="2"
@@ -34,11 +36,12 @@
     </section>
 
     <section>
-      <span class="input-label">signed, integer, step === 1</span>
+      <span class="input-label">signed, integer, step === 1, readonly</span>
       <vue-number-input
         v-model="test2"
         placeholder="Write some text"
         numberType="integer"
+        readonly
       />
     </section>
 
@@ -112,7 +115,7 @@ section {
   margin: 0 auto;
   padding: 20px;
   margin-bottom: 10px;
-  background: rgba(coral, .5);
+  box-shadow: 0px 2px 4px rgba(0,0,0,.2);
   .input-label {
     margin-top: 0;
     display: block;

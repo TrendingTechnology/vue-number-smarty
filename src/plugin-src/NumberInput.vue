@@ -3,9 +3,10 @@
     <input
       v-model="model"
       type="text"
-      class="vue-number-input__input"
+      :class="inputClassesComputed"
       :placeholder="placeholder"
       :style="stylesComputed"
+      :disabled="readonly"
       @wheel="onNumInputWheel($event)"
       @blur="onBlur"
     >
@@ -27,6 +28,11 @@
 export default {
   name: 'VueNumberInput',
   props: {
+    readonly: {
+      required: false,
+      type: Boolean,
+      default: false,
+    },
     align: {
       required: false,
       type: String,
@@ -86,7 +92,7 @@ export default {
       type: Number,
       default: 2,
     },
-    errorred: {
+    error: {
       required: false,
       type: Boolean,
       default: false,
@@ -144,6 +150,12 @@ export default {
     },
   },
   computed: {
+    inputClassesComputed() {
+      return {
+        'vue-number-input__input': true,
+        'vue-number-input__input-error': this.error,
+      };
+    },
     stylesComputed() {
       return {
         textAlign: this.align,
@@ -307,15 +319,26 @@ export default {
     display: inline-block;
     position: relative;
     .vue-number-input__input {
-      padding: 3px 10px;
+      padding: 5px 10px;
       padding-right: 20px;
       font-size: 1rem;
+      box-shadow: none;
+      border: none;
+      border-bottom: 2px solid rgba(gray,.8);
+      outline: none;
+      &:focus {
+        box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+    .vue-number-input__input-error {
+      border-bottom: 2px solid crimson;
+      background: rgba(crimson, .1);
     }
     .vue-number-input__arrows-wrapper {
       position: absolute;
       right: 0;
       top: 0;
-      bottom: 0;
+      bottom: 3px;
       display: flex;
       flex-direction: column;
       padding: 3px 0;

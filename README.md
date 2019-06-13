@@ -125,8 +125,12 @@ floatPartMaxLen: {
   type: Number,
   default: 2,
 },
-// in development
-errorred: {
+error: {
+  required: false,
+  type: Boolean,
+  default: false,
+},
+readonly: {
   required: false,
   type: Boolean,
   default: false,
@@ -138,7 +142,7 @@ Component styles are override-friendly. So you can configure the desired field s
 The css classes of the component are listed here:
 ```
 .vue-number-input__wrapper
-  .vue-number-input__input
+  .vue-number-input__input (.vue-number-input__input-error)
   .vue-number-input__arrows-wrapper
     .vue-number-input__arrow-up
     .vue-number-input__arrow-down
