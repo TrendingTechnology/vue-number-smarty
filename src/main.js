@@ -1,6 +1,6 @@
 import Vue from 'vue';
-// import VueNumberInput from 'vue-number-smarty';
-import VueNumberInput from '@/plugin-src/dist/main.js';
+import VueNumberInput from 'vue-number-smarty';
+// import VueNumberInput from '@/plugin-src/dist/main.js';
 import App from './App.vue';
 
 Vue.use(VueNumberInput);
