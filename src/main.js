@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import VueNumInput from '@/plugin-src/';
+import VueNumberInput from '@/plugin-src/';
 import App from './App.vue';
 
-Vue.use(VueNumInput);
+Vue.use(VueNumberInput);
 
 Vue.config.productionTip = false;
 

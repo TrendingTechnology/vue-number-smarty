@@ -1,32 +1,38 @@
 <template>
   <div id="app">
-    <h1>@seokky/vue-number-input</h1>
+    <header>
+      <h1>@seokky/vue-number-input</h1>
+    </header>
 
     <section>
-      <h3>unsigned | integer | step === 2 | maxLen === 2</h3>
+      <span class="input-label">unsigned, integer, step === 2,</span>
+      <span class="input-label">maxLen === 2, align === 'center'</span>
       <vue-number-input
         v-model="test0"
         placeholder="Write some text"
         numberType="integer"
         unsigned
+        align="center"
         :step="2"
         :maxLen="2"
       />
     </section>
 
     <section>
-      <h3>signed | integer | step === 2 | maxLen === 4</h3>
+      <span class="input-label">signed, integer, step === 2,</span>
+      <span class="input-label">maxLen === 4, align === 'right'</span>
       <vue-number-input
         v-model="test1"
         placeholder="Write some text"
         numberType="integer"
+        align="right"
         :step="2"
         :maxLen="4"
       />
     </section>
 
     <section>
-      <h3>signed | integer | step === 1</h3>
+      <span class="input-label">signed, integer, step === 1</span>
       <vue-number-input
         v-model="test2"
         placeholder="Write some text"
@@ -35,7 +41,8 @@
     </section>
 
     <section>
-      <h3>signed | integer | step === 5 | maxValue === 10 | minValue === -10</h3>
+      <span class="input-label">signed, integer, step === 5,</span>
+      <span class="input-label">maxValue === 10, minValue === -10</span>
       <vue-number-input
         v-model="test3"
         placeholder="Write some text"
@@ -47,7 +54,8 @@
     </section>
 
     <section>
-      <h3>unsigned | integer | step === 5 | maxValue === 20 | minValue === 10</h3>
+      <span class="input-label">unsigned, integer, step === 5,</span>
+      <span class="input-label">maxValue === 20, minValue === 10</span>
       <vue-number-input
         v-model="test4"
         placeholder="Write some text"
@@ -83,16 +91,34 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+body {
+  margin: 0;
+}
+header {
+  background: rgba(coral, .9);
+  margin-bottom: 40px;
+  padding: 30px 10px;
+  h1 {
+    margin: 0;
+    color: white;
+  }
 }
 section {
   display: block;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border-bottom: 2px solid rgba(0,0,0,.5);
-  h3 {
+  margin-bottom: 10px;
+  background: rgba(coral, .5);
+  .input-label {
     margin-top: 0;
+    display: block;
+    font-weight: bold;
+    padding: 5px 0;
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
   }
 }
 </style>

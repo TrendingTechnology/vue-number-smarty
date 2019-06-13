@@ -5,13 +5,18 @@
       type="text"
       class="vue-number-input__input"
       :placeholder="placeholder"
+      :style="stylesComputed"
       @wheel="onNumInputWheel($event)"
       @blur="onBlur"
     >
 
     <div class="vue-number-input__arrows-wrapper">
-      <button class="vue-number-input__arrow-up" />
-      <button class="vue-number-input__arrow-down" />
+      <button class="vue-number-input__arrow-up"
+        @click="increment"
+      />
+      <button class="vue-number-input__arrow-down"
+        @click="decrement"
+      />
     </div>
   </div>
 </template>
@@ -22,6 +27,12 @@
 export default {
   name: 'VueNumberInput',
   props: {
+    align: {
+      required: false,
+      type: String,
+      default: 'left',
+      validator: value => (['left', 'center', 'right', 'justify'].includes(value)),
+    },
     value: {
       required: false,
       type: String,
@@ -97,20 +108,20 @@ export default {
         });
       }
 
-      // обрезаем строку, если юзер вручную ввел слишком много символов
+      // cut the string if the user manually entered too many characters
       if (this.numberType === 'integer' && (val.length > this.maxLenComputed)) {
         this.$nextTick(() => {
           this.model = val.substr(0, this.maxLenComputed);
         });
       }
 
-      // контролируем соблюдение intPartMaxLen и floatPartMaxLen
-      // если надо - приводим строку к регламентированному виду
+      // control compliance with the intPartMaxLen and floatPartMaxLen
+      // if necessary - bring the string to the regulated form
       if (this.numberType === 'float') {
         let intPart = val.split('.')[0];
         let floatPart = val.split('.')[1] || '';
 
-        // работаем с целой частью числа
+        // processing integer part of number
         if (intPart.length > this.intPartMaxLenComputed) {
           intPart = intPart.slice(0, this.intPartMaxLenComputed);
           this.$nextTick(() => {
@@ -118,7 +129,7 @@ export default {
           });
         }
 
-        // работаем с частью числа после точки
+        // processing float part of number
         if (floatPart.length > this.floatPartMaxLen) {
           floatPart = floatPart.slice(0, this.floatPartMaxLen);
           this.$nextTick(() => {
@@ -133,6 +144,11 @@ export default {
     },
   },
   computed: {
+    stylesComputed() {
+      return {
+        textAlign: this.align,
+      };
+    },
     /* string max length without minus sign */
     maxLenComputed() {
       if (this.model[0] === '-') {
@@ -155,23 +171,21 @@ export default {
       if (!this[checkFuncName](this.model)) {
         this.model = '';
       } else {
-        // переводим условное "-5." в "-5"
-        this.model = String(Number(this.model));
-        // контролируем соблюдение max и min границ
-        this.model = (Number(this.model) > this.maxValue)
+        // clean the line from incorrect characters
+        this.model = String(+this.model);
+        // control compliance with max and min boundaries
+        this.model = (+this.model > this.maxValue)
           ? String(this.maxValue)
           : this.model;
-        this.model = (Number(this.model) < this.minValue)
+        this.model = (+this.model < this.minValue)
           ? String(this.minValue)
           : this.model;
       }
     },
     emitValue() {
-      // event называется 'input' для того, чтобы работал v-model
       this.$emit('input', this.model);
     },
     onBlur() {
-      // приводим поле к нужному виду (если надо) и эмиттим
       this.formatModelForEmit();
       this.emitValue();
     },
@@ -293,8 +307,9 @@ export default {
     display: inline-block;
     position: relative;
     .vue-number-input__input {
-      padding: 5px 10px;
+      padding: 3px 10px;
       padding-right: 20px;
+      font-size: 1rem;
     }
     .vue-number-input__arrows-wrapper {
       position: absolute;
@@ -303,6 +318,7 @@ export default {
       bottom: 0;
       display: flex;
       flex-direction: column;
+      padding: 3px 0;
       .vue-number-input__arrow-up {
         position: relative;
         background: transparent;
@@ -321,7 +337,6 @@ export default {
           border-right: 4px solid transparent;
           content: "";
           width: 0;
-          height: 100%;
           top: 0;
           bottom: 0;
         }
@@ -344,7 +359,6 @@ export default {
           border-right: 4px solid transparent;
           content: "";
           width: 0;
-          height: 100%;
           top: 0;
           bottom: 0;
         }

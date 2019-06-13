@@ -6,6 +6,8 @@ const NumInpPlugin = {
   },
 };
 
+VueNumberInput.install = NumInpPlugin.install;
+
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(VueNumberInput);
 }
