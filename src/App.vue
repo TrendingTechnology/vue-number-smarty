@@ -2,18 +2,24 @@
   <div id="app">
     <header>
       <h1>vue-number-smarty</h1>
-      <a href="https://github.com/Seokky/vue-number-smarty">github</a>
+      <a id="githubLink" href="https://github.com/Seokky/vue-number-smarty" target="_blank">github</a>
     </header>
 
     <section class="demo-case">
       <div class="demo-case__half">
-        <ul class="props-list">
-          <li>unsigned</li>
-          <li>numberType === integer</li>
-          <li>step === 1 (default)</li>
-          <li>maxLen === 4</li>
-          <li>align === 'left' (default)</li>
-        </ul>
+        <pre>
+          <b>&lt;vue-number-input</b>
+            <b>v-model</b>="test0"
+            <b>placeholder</b>="Write some text"
+            <b>numberType</b>="integer"
+            <b>unsigned</b>
+            <b>textColor</b>="darkblue"
+            <b>color</b>="darkblue"
+            <b>fontWeight</b>="bold"
+            <b>align</b>="left"
+            <b>:maxLen</b>="4"
+          <b>/&gt;</b>
+        </pre>
       </div>
       <div class="demo-case__half">
         <vue-number-input
@@ -22,6 +28,9 @@
           numberType="integer"
           unsigned
           align="left"
+          textColor="darkblue"
+          color="darkblue"
+          fontWeight="bold"
           :maxLen="4"
         />
       </div>
@@ -29,41 +38,22 @@
 
     <section class="demo-case">
       <div class="demo-case__half">
-        <ul class="props-list">
-          <li>unsigned</li>
-          <li>numberType === integer</li>
-          <li>step === 2</li>
-          <li>maxLen === 2</li>
-          <li>align === 'center'</li>
-        </ul>
+        <pre>
+          <b>&lt;vue-number-input</b>
+            <b>v-model</b>="test1"
+            <b>placeholder</b>="Write some text"
+            <b>numberType</b>="integer"
+            <b>signed</b>
+            <b>align</b>="right"
+            <b>:step</b>="5"
+            <b>:minValue</b>="-50"
+            <b>:maxValue</b>="50"
+          <b>/&gt;</b>
+        </pre>
       </div>
       <div class="demo-case__half">
         <vue-number-input
           v-model="test1"
-          placeholder="Write some text"
-          numberType="integer"
-          unsigned
-          align="center"
-          :step="2"
-          :maxLen="2"
-        />
-      </div>
-    </section>
-
-    <section class="demo-case">
-      <div class="demo-case__half">
-        <ul class="props-list">
-          <li>signed</li>
-          <li>numberType === integer</li>
-          <li>step === 5</li>
-          <li>minValue === -50</li>
-          <li>maxValue === 50</li>
-          <li>align === 'right'</li>
-        </ul>
-      </div>
-      <div class="demo-case__half">
-        <vue-number-input
-          v-model="test2"
           placeholder="Write some text"
           numberType="integer"
           signed
@@ -77,18 +67,19 @@
 
     <section class="demo-case">
       <div class="demo-case__half">
-        <ul class="props-list">
-          <li>error</li>
-          <li>unsigned</li>
-          <li>numberType === integer</li>
-          <li>step === 1 (default)</li>
-          <li>align === 'left' (default)</li>
-          <li>maxLen === 6 (default)</li>
-        </ul>
+        <pre>
+          <b>&lt;vue-number-input</b>
+            <b>v-model</b>="test2"
+            <b>placeholder</b>="Write some text"
+            <b>numberType</b>="integer"
+            <b>unsigned</b>
+            <b>error</b>
+          <b>/&gt;</b>
+        </pre>
       </div>
       <div class="demo-case__half">
         <vue-number-input
-          v-model="test3"
+          v-model="test2"
           placeholder="Write some text"
           numberType="integer"
           unsigned
@@ -97,41 +88,24 @@
       </div>
     </section>
 
-    <!-- <section class="demo-case">
-      <div class="demo-case__half">
-        <ul class="props-list">
-          <li>unsigned</li>
-          <li>numberType === float</li>
-          <li>step === 1 (default)</li>
-          <li>align === 'center'</li>
-          <li>maxLen === 6 (default)</li>
-        </ul>
-      </div>
-      <div class="demo-case__half">
-        <vue-number-input
-          v-model="test4"
-          placeholder="Write some text"
-          numberType="float"
-          unsigned
-          align="center"
-        />
-      </div>
-    </section> -->
-
     <section class="demo-case">
       <div class="demo-case__half">
-        <ul class="props-list">
-          <li>unsigned</li>
-          <li>numberType === float</li>
-          <li>step === 0.5 (default)</li>
-          <li>align === 'center'</li>
-          <li>intPartMaxLen === 2</li>
-          <li>floatPartMaxLen === 3</li>
-        </ul>
+        <pre>
+          <b>&lt;vue-number-input</b>
+            <b>v-model</b>="test3"
+            <b>placeholder</b>="Write some text"
+            <b>numberType</b>="float"
+            <b>unsigned</b>
+            <b>align</b>="center"
+            <b>:step</b>="0.5"
+            <b>:intPartMaxLen</b>="2"
+            <b>:floatPartMaxLen</b>="3"
+          <b>/&gt;</b>
+        </pre>
       </div>
       <div class="demo-case__half">
         <vue-number-input
-          v-model="test5"
+          v-model="test3"
           placeholder="Write some text"
           numberType="float"
           unsigned
@@ -145,13 +119,18 @@
 
     <section class="demo-case">
       <div class="demo-case__half">
-        <ul class="props-list">
-          <li>readonly</li>
-        </ul>
+        <pre>
+          <b>&lt;vue-number-input</b>
+            <b>v-model</b>="test3"
+            <b>placeholder</b>="Readonly"
+            <b>numberType</b>="float"
+            <b>readonly</b>
+          <b>/&gt;</b>
+        </pre>
       </div>
       <div class="demo-case__half">
         <vue-number-input
-          v-model="test5"
+          v-model="test4"
           placeholder="Readonly"
           numberType="float"
           readonly
@@ -197,10 +176,21 @@ header {
     margin: 0;
     color: white;
   }
+  #githubLink {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+    background: white;
+    padding: 3px 15px;
+    border-radius: 2px;
+    color: rgba(0,0,0,.8);
+    box-shadow: 0px 2px 2px rgba(0,0,0,.2);
+  }
 }
 .demo-case {
   display: flex;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   margin-bottom: 10px;
   box-shadow: 0px 2px 4px rgba(0,0,0,.2);
@@ -213,16 +203,13 @@ header {
     &:first-of-type {
       border-right: 2px solid coral;
       background: rgba(0,0,0,.025);
+      width: 280px;
     }
-  }
-  .props-list {
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    li {
-      padding: 3px;
-      font-weight: bold;
-      color: coral;
+    pre {
+      text-align: left;
+      margin-left: -60px;
+      font-size: 1.05rem;
+      margin: 0;
     }
   }
 }

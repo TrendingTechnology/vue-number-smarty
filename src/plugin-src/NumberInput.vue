@@ -97,6 +97,21 @@ export default {
       type: Boolean,
       default: false,
     },
+    color: {
+      required: false,
+      type: String,
+      default: 'rgba(0,0,0,.4)',
+    },
+    textColor: {
+      required: false,
+      type: String,
+      default: 'rgba(0,0,0,.9)',
+    },
+    fontWeight: {
+      required: false,
+      type: String,
+      default: 'normal',
+    },
   },
   data() {
     return {
@@ -159,6 +174,9 @@ export default {
     stylesComputed() {
       return {
         textAlign: this.align,
+        borderBottomColor: (this.error) ? 'crimson' : this.color,
+        color: this.textColor,
+        fontWeight: this.fontWeight,
       };
     },
     /* string max length without minus sign */
@@ -323,7 +341,7 @@ export default {
       padding-right: 20px;
       font-size: 1rem;
       box-shadow: none;
-      border: none;
+      border: 1px solid rgba(0,0,0,.1);;
       border-bottom: 2px solid rgba(gray,.8);
       outline: none;
       &:focus {
@@ -355,7 +373,7 @@ export default {
         }
         &:after {
           display: block;
-          border-bottom: 6px solid rgba(0,0,0,.6);
+          border-bottom: 6px solid rgba(0,0,0,.7);
           border-left: 4px solid transparent;
           border-right: 4px solid transparent;
           content: "";
@@ -377,7 +395,7 @@ export default {
         }
         &:after {
           display: block;
-          border-top: 6px solid rgba(0,0,0,.6);
+          border-top: 6px solid rgba(0,0,0,.7);
           border-left: 4px solid transparent;
           border-right: 4px solid transparent;
           content: "";

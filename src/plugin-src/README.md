@@ -1,5 +1,7 @@
 # vue-number-smarty
 
+[Demo page](http://seokky-workflow.ru/vue-number-smarty/)
+
 ## Features
 
 1. integer/float
@@ -13,6 +15,7 @@
 9. max length of string
 10. error state
 11. readonly state
+12. theme options
 
 ## Installation
 ```
@@ -32,46 +35,7 @@ That's all!
 
 ## Usage
 
-```
-<vue-number-input
-  v-model="test0"
-  placeholder="Write some text"
-  numberType="integer"
-  unsigned
-  align="center"
-  :step="2"
-  :maxLen="2"
-/>
-```
-```
-<vue-number-input
-  v-model="test1"
-  placeholder="Write some text"
-  numberType="float"
-  align="right"
-  :step="2"
-  :intPartMaxLen="2"
-  :floatPartMaxLen="2"
-  :maxValue="20"
-/>
-```
-```
-<vue-number-input
-  v-model="test2"
-  placeholder="Write some text"
-  numberType="integer"
-/>
-```
-```
-<vue-number-input
-  v-model="test3"
-  placeholder="Write some text"
-  numberType="integer"
-  :maxValue="10"
-  :minValue="-10"
-  :step="5"
-/>
-```
+![](http://seokky-workflow.ru/vue-number-smarty/preview.png)
 
 ### Props
 ```
@@ -136,6 +100,23 @@ readonly: {
   required: false,
   type: Boolean,
   default: false,
+},
+<!-- border-bottom color -->
+color: {
+  required: false,
+  type: String,
+  default: 'rgba(0,0,0,.4)',
+},
+<!-- text-color -->
+textColor: {
+  required: false,
+  type: String,
+  default: 'rgba(0,0,0,.9)',
+},
+fontWeight: {
+  required: false,
+  type: String,
+  default: 'normal',
 },
 ```
 ### Styles
