@@ -360,6 +360,7 @@ export default {
       display: flex;
       flex-direction: column;
       padding: 3px 0;
+      min-width: 13px;
       .vue-number-input__arrow-up {
         position: relative;
         background: transparent;
