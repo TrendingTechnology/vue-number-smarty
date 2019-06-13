@@ -1,4 +1,20 @@
-# vue-number-input
+# vue-smarty-number (package is not published yet)
+
+## Installation
+```
+npm i @seokky/vue-number-input
+```
+or with yarn:
+```
+yarn add @seokky/vue-number-input
+```
+Then paste it in your main.js file:
+```
+import VueNumberInput from 'vue-number-input';
+
+Vue.use(VueNumberInput);
+```
+That's all!
 
 ## Project setup
 ```
