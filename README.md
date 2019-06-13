@@ -2,7 +2,7 @@
 
 ## Installation
 ```
-npm i -D @seokky/vue-number-input
+npm i @seokky/vue-number-input
 ```
 or with yarn:
 ```
