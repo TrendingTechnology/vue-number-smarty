@@ -156,7 +156,7 @@ yarn serve || npm run serve
 Go to /src/main.js and do it:
 ```
 // import VueNumberInput from 'vue-number-smarty';
-import VueNumberInput from '@/plugin-src/dist/main.js';
+import VueNumberInput from '@/plugin-src/main.js';
 ```
 Now you can go to the root folder and type:
 ```
