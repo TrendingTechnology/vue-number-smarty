@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueNumberInput from 'vue-smarty1-number';
+import VueNumberInput from 'vue-number-smarty';
 import App from './App.vue';
 
 Vue.use(VueNumberInput);

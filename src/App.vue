@@ -19,15 +19,17 @@
     </section>
 
     <section>
-      <span class="input-label">signed, integer, step === 2,</span>
-      <span class="input-label">maxLen === 4, align === 'right'</span>
+      <span class="input-label">signed, float, step === 2,</span>
+      <span class="input-label">intPartMaxLen === 2, floatPartMaxLen === 2, align === 'right'</span>
       <vue-number-input
         v-model="test1"
         placeholder="Write some text"
-        numberType="integer"
+        numberType="float"
         align="right"
         :step="2"
-        :maxLen="4"
+        :intPartMaxLen="2"
+        :floatPartMaxLen="2"
+        :maxValue="20"
       />
     </section>
 
