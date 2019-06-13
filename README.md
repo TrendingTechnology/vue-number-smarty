@@ -1,4 +1,4 @@
-# vue-number-input
+# vue-number-input (package is not published yet)
 
 ## Installation
 ```
