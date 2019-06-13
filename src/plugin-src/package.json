@@ -1,6 +1,6 @@
 {
   "name": "vue-number-smarty",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Number input with rich functionality for Vue.js",
   "main": "main.js",
   "private": false,
