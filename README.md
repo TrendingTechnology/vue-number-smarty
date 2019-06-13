@@ -10,7 +10,7 @@ yarn add vue-smarty-number
 ```
 Then paste it in your main.js file:
 ```
-import VueNumberInput from 'vue-number-input';
+import VueNumberInput from 'vue-smarty-number';
 
 Vue.use(VueNumberInput);
 ```
