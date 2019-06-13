@@ -11,6 +11,8 @@
 7. max length of integer part (only for float type)
 8. max length of float part (only for float type)
 9. max length of string
+10. error state
+11. readonly state
 
 ## Installation
 ```
