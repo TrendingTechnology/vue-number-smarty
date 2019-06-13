@@ -58,6 +58,7 @@ That's all!
   v-model="test2"
   placeholder="Write some text"
   numberType="integer"
+  error
 />
 ```
 ```
@@ -68,6 +69,7 @@ That's all!
   :maxValue="10"
   :minValue="-10"
   :step="5"
+  readonly
 />
 ```
 

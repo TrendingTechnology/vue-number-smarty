@@ -150,27 +150,36 @@ The css classes of the component are listed here:
 
 ## Project setup
 ```
-yarn install
+yarn install || npm i
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn serve || npm run serve
 ```
+Go to /src/main.js and do it:
+```
+// import VueNumberInput from 'vue-number-smarty';
+import VueNumberInput from '@/plugin-src/main.js';
+```
+Now you can go to the root folder and type:
+```
+yarn serve || npm run serve
+```
+You can work with /src/plugin-src/NumberInput.vue and see it in your browser.
 
 ### Compiles and minifies for production
+Go to /src/plugin-src/ and do:
 ```
-yarn run build
+npx bili
 ```
-
-### Run your tests
+Then go to /src/plugin-src/dist/main.js and at the end replace
 ```
-yarn run test
+module.exports
 ```
-
-### Lints and fixes files
+with
 ```
-yarn run lint
+export default
 ```
 
 ### Customize configuration
