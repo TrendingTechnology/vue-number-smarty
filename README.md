@@ -32,7 +32,7 @@ That's all!
 
 ## Usage
 
-![](https://yadi.sk/i/l9sVfgFDpn30YA)
+![](https://downloader.disk.yandex.ru/preview/dd204e0b7c5ae97f149544fdd5b5f63d19ffc99451594c375e6b1958dd659e45/5d02a0ec/jkyEdAg8VkkPq9hIqH6yJVYW9riLzPuweS_tNFhDzkXeHuDCxzbBX0tbXzXHbIhLGebX9MwwPcEuWuSk2A1qhg%3D%3D?uid=0&filename=preview.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=2048x2048)
 
 ```
 <vue-number-input
