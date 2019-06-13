@@ -2,7 +2,7 @@
   "name": "vue-number-smarty",
   "version": "1.0.3",
   "description": "Number input with rich functionality for Vue.js",
-  "main": "main.js",
+  "main": "dist/main.js",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,5 +32,10 @@
   "author": {
     "name": "Maxim Noverin"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "bili": "^4.8.0",
+    "rollup-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
 }

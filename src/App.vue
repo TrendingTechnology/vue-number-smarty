@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <h1>@seokky/vue-number-input</h1>
+      <h1>vue-number-smarty</h1>
     </header>
 
     <section>
