@@ -1,4 +1,4 @@
-# vue-number-smarty (package is not published yet)
+# vue-number-smarty
 
 ## Installation
 ```
