@@ -35,7 +35,7 @@ That's all!
 
 ## Usage
 
-![](http://seokky-workflow.ru/vue-number-smarty/preview.png)
+![](http://seokky-workflow.ru/vue-number-smarty/demopreview.png)
 
 ### Props
 ```
