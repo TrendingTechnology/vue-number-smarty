@@ -349,7 +349,7 @@ export default {
       }
     }
     .vue-number-input__input-error {
-      border-bottom: 2px solid crimson;
+      border-bottom-color: crimson;
       background: rgba(crimson, .1);
     }
     .vue-number-input__arrows-wrapper {
@@ -368,19 +368,15 @@ export default {
         border: none;
         outline: none;
         flex-grow: 1;
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.1);
+        &:hover:after {
+          border-bottom-color: rgba(0,0,0,.5);
         }
         &:after {
+          content: '';
           display: block;
           border-bottom: 6px solid rgba(0,0,0,.7);
           border-left: 4px solid transparent;
           border-right: 4px solid transparent;
-          content: "";
-          width: 0;
-          top: 0;
-          bottom: 0;
         }
       }
       .vue-number-input__arrow-down {
@@ -390,19 +386,15 @@ export default {
         border: none;
         outline: none;
         flex-grow: 1;
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.1);
+        &:hover:after {
+          border-top-color: rgba(0,0,0,.5);
         }
         &:after {
+          content: '';
           display: block;
           border-top: 6px solid rgba(0,0,0,.7);
           border-left: 4px solid transparent;
           border-right: 4px solid transparent;
-          content: "";
-          width: 0;
-          top: 0;
-          bottom: 0;
         }
       }
     }

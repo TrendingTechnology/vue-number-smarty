@@ -1,28 +1,28 @@
-<template>
-  <div id="app">
-    <header>
-      <h1>vue-number-smarty</h1>
-      <a id="githubLink" href="https://github.com/Seokky/vue-number-smarty" target="_blank">github</a>
-    </header>
+<template lang="pug">
+  div#app
+    header
+      h1 Vue-number-smarty
+      a#githubLink(
+        href="https://github.com/Seokky/vue-number-smarty"
+        target="_blank"
+      ) github
 
-    <section class="demo-case">
-      <div class="demo-case__half">
-        <pre>
-          <b>&lt;vue-number-input</b>
-            <b>v-model</b>="test0"
-            <b>placeholder</b>="Write some text"
-            <b>numberType</b>="integer"
-            <b>unsigned</b>
-            <b>textColor</b>="darkblue"
-            <b>color</b>="darkblue"
-            <b>fontWeight</b>="bold"
-            <b>align</b>="left"
-            <b>:maxLen</b>="4"
-          <b>/&gt;</b>
-        </pre>
-      </div>
-      <div class="demo-case__half">
-        <vue-number-input
+    section.demo-case
+      div.demo-case__half
+        pre.
+          &lt;vue-number-input
+            v-model="test0"
+            placeholder="Write some text"
+            numberType="integer"
+            unsigned
+            textColor="darkblue"
+            color="darkblue"
+            fontWeight="bold"
+            align="left"
+            :maxLen="4"
+          /&gt;
+      div.demo-case__half
+        vue-number-input(
           v-model="test0"
           placeholder="Write some text"
           numberType="integer"
@@ -32,27 +32,23 @@
           color="darkblue"
           fontWeight="bold"
           :maxLen="4"
-        />
-      </div>
-    </section>
+        )
 
-    <section class="demo-case">
-      <div class="demo-case__half">
-        <pre>
-          <b>&lt;vue-number-input</b>
-            <b>v-model</b>="test1"
-            <b>placeholder</b>="Write some text"
-            <b>numberType</b>="integer"
-            <b>signed</b>
-            <b>align</b>="right"
-            <b>:step</b>="5"
-            <b>:minValue</b>="-50"
-            <b>:maxValue</b>="50"
-          <b>/&gt;</b>
-        </pre>
-      </div>
-      <div class="demo-case__half">
-        <vue-number-input
+    section.demo-case
+      div.demo-case__half
+        pre.
+          &lt;vue-number-input
+            v-model="test1"
+            placeholder="Write some text"
+            numberType="integer"
+            signed
+            align="right"
+            :step="5"
+            :minValue="-50"
+            :maxValue="50"
+          /&gt;
+      div.demo-case__half
+        vue-number-input(
           v-model="test1"
           placeholder="Write some text"
           numberType="integer"
@@ -61,50 +57,42 @@
           :step="5"
           :minValue="-50"
           :maxValue="50"
-        />
-      </div>
-    </section>
+        )
 
-    <section class="demo-case">
-      <div class="demo-case__half">
-        <pre>
-          <b>&lt;vue-number-input</b>
-            <b>v-model</b>="test2"
-            <b>placeholder</b>="Write some text"
-            <b>numberType</b>="integer"
-            <b>unsigned</b>
-            <b>error</b>
-          <b>/&gt;</b>
-        </pre>
-      </div>
-      <div class="demo-case__half">
-        <vue-number-input
+    section.demo-case
+      div.demo-case__half
+        pre.
+          &lt;vue-number-input
+            v-model="test2"
+            placeholder="Write some text"
+            numberType="integer"
+            unsigned
+            error
+          /&gt;
+      div.demo-case__half
+        vue-number-input(
           v-model="test2"
           placeholder="Write some text"
           numberType="integer"
           unsigned
           error
-        />
-      </div>
-    </section>
+        )
 
-    <section class="demo-case">
-      <div class="demo-case__half">
-        <pre>
-          <b>&lt;vue-number-input</b>
-            <b>v-model</b>="test3"
-            <b>placeholder</b>="Write some text"
-            <b>numberType</b>="float"
-            <b>unsigned</b>
-            <b>align</b>="center"
-            <b>:step</b>="0.5"
-            <b>:intPartMaxLen</b>="2"
-            <b>:floatPartMaxLen</b>="3"
-          <b>/&gt;</b>
-        </pre>
-      </div>
-      <div class="demo-case__half">
-        <vue-number-input
+    section.demo-case
+      div.demo-case__half
+        pre.
+          &lt;vue-number-input
+            v-model="test3"
+            placeholder="Write some text"
+            numberType="float"
+            unsigned
+            align="center"
+            :step="0.5"
+            :intPartMaxLen="2"
+            :floatPartMaxLen="3"
+          /&gt;
+      div.demo-case__half
+        vue-number-input(
           v-model="test3"
           placeholder="Write some text"
           numberType="float"
@@ -113,32 +101,24 @@
           :step="0.5"
           :intPartMaxLen="2"
           :floatPartMaxLen="3"
-        />
-      </div>
-    </section>
+        )
 
-    <section class="demo-case">
-      <div class="demo-case__half">
-        <pre>
-          <b>&lt;vue-number-input</b>
-            <b>v-model</b>="test3"
-            <b>placeholder</b>="Readonly"
-            <b>numberType</b>="float"
-            <b>readonly</b>
-          <b>/&gt;</b>
-        </pre>
-      </div>
-      <div class="demo-case__half">
-        <vue-number-input
+    section.demo-case
+      div.demo-case__half
+        pre.
+          &lt;vue-number-input
+            v-model="test4"
+            placeholder="Readonly"
+            numberType="float"
+            readonly
+          /&gt;
+      div.demo-case__half
+        vue-number-input(
           v-model="test4"
           placeholder="Readonly"
           numberType="float"
           readonly
-        />
-      </div>
-    </section>
-
-  </div>
+        )
 </template>
 
 <script>
@@ -175,6 +155,7 @@ header {
   h1 {
     margin: 0;
     color: white;
+    text-shadow: 0px 2px 2px rgba(0,0,0,.2);
   }
   #githubLink {
     display: inline-block;
@@ -203,13 +184,14 @@ header {
     &:first-of-type {
       border-right: 2px solid coral;
       background: rgba(0,0,0,.025);
-      width: 280px;
+      max-width: 315px;
+      display: flex;
     }
     pre {
       text-align: left;
-      margin-left: -60px;
       font-size: 1.05rem;
       margin: 0;
+      width: 250px;
     }
   }
 }
