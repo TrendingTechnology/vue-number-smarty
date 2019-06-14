@@ -377,6 +377,7 @@ export default {
           border-bottom: 6px solid rgba(0,0,0,.7);
           border-left: 4px solid transparent;
           border-right: 4px solid transparent;
+          width: 0;
         }
       }
       .vue-number-input__arrow-down {
@@ -395,6 +396,7 @@ export default {
           border-top: 6px solid rgba(0,0,0,.7);
           border-left: 4px solid transparent;
           border-right: 4px solid transparent;
+          width: 0;
         }
       }
     }
